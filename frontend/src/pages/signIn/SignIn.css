@@ -3,7 +3,15 @@ padding-top: 80px;
   /* padding-left: 80px;   */
   
 }
+.adminLog{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.adminLog h2 {
+  text-align: center;
+}
 .centerSignIn{
    display: flex;
   align-items: center;
@@ -30,14 +38,17 @@ cursor: pointer;
 }
 
 
-.imageContainer{
+.imageContainerSignIn{
   right: 0;
   width: 55%;
   height: 100;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: rebeccapurple; */
+  
+
+  /* Add a border to visualize the effect */
+
 
 }
 
@@ -56,8 +67,8 @@ cursor: pointer;
 
 
 .imgContainerText{
-  margin-left: 20px;
-  padding-top: 10px;
+  margin-left: 10px;
+  padding: 10px;
 }
 
 .newHereContainer{
@@ -72,4 +83,13 @@ cursor: pointer;
 }
 .whiteH2{
   color: white !important;
+}
+
+.newHereContainer {
+  display: flex;
+  justify-content: flex-end;  /* Align to the right */
+  align-items: flex-start;    /* Align to the top */
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
