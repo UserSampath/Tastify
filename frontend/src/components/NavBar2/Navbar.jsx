@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
-import Logo from "../../../image/Logo.png";
+import Logo from "../../../image/logo.png";
 import LogOutButton from "../LogOutButton/LogOutButton";
 import { useNavigate } from "react-router-dom";
 const Navbars = () => {
@@ -20,7 +20,7 @@ const Navbars = () => {
   };
 
   return (
-    <div style={{ position: "fixed", width: "100% " }}>
+    <div >
       <Navbar expand="lg" className="nav" style={{ height: "50px" }}>
         <Navbar.Brand
           href="#home"
@@ -29,19 +29,19 @@ const Navbars = () => {
             style={{ marginLeft: "30px" }}
             src={Logo}
             alt=" Employee Management System"
-            height="40"
+            height="32"
             className="d-inline-block align-top"
           />
           <span
-            style={{ color: "#ffffff", fontWeight: "600" }}
+            style={{ color: "#6b6b6b", fontWeight: "600" }}
             className="ms-4">
-            EMS
+            Tastify
           </span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto"></Nav>
-          <span style={{ color: "#ffffff", fontWeight: "600" }}>
+          <span style={{ color: "#6b6b6b", fontWeight: "600" }}>
             <div style={{ marginRight: "40px", fontWeight: "100" }}>
               {localStorage.getItem("userName") ? (
                 <div>
