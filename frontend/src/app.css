@@ -86,11 +86,11 @@ p{
 
 /*=====================reuseable css============= */
 
-.container {
+/* .container {
   max-width: 1140px !important;
   margin-inline: auto !important;
   padding-inline: 15px !important;
-}
+} */
 
 .boxContainer {
   max-width: 960px !important;
