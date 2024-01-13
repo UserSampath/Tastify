@@ -7,6 +7,7 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Logo from "../../../image/logo.png";
 import LogOutButton from "../LogOutButton/LogOutButton";
 import { useNavigate } from "react-router-dom";
+import { IoMdNotificationsOutline } from "react-icons/io";
 const Navbars = () => {
 
   const navigate = useNavigate()
@@ -43,24 +44,10 @@ const Navbars = () => {
           <Nav className="me-auto"></Nav>
           <span style={{ color: "#6b6b6b", fontWeight: "600" }}>
             <div style={{ marginRight: "40px", fontWeight: "100" }}>
-              {localStorage.getItem("userName") ? (
-                <div>
-                  {showLogOut && <LogOutButton onClick={clickedLogOut} />}
-
-                  <div
-                    className="signedInUser"
-                    style={{ userSelect: "none" }}
-                    onClick={() => setShowLogOut((prev) => !prev)}>
-                    {localStorage.getItem("userName").replace(/"/g, "")}
-                  </div>
-                </div>
-              ) : (
-                <div
-                  className="signedInUser"
-                  onClick={() => navigate("/login")}>
-                  Sign In
-                </div>
-              )}
+              <div className="d-flex align-items-center">
+                <IoMdNotificationsOutline className="m-2" size={28}/>
+                <img src="../../../image/Men.png" alt="" style={{height:"42px"}} />
+            </div>
             </div>
           </span>
         </Navbar.Collapse>

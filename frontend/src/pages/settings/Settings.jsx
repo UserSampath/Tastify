@@ -1,17 +1,20 @@
-import React from "react";
+import React from 'react'
 import Navbars from "../../components/NavBar2/Navbar";
 import SideBar from "../../components/side/SideBar";
 
-const Home = () => {
+const Settings = () => {
   return (
     <div>
-      <SideBar>
-        <div style={{ width: "100% " }}>
+      <SideBar selectedNav="Settings">
+        <div>
           <Navbars />
+          <div>
+            <h1>Settings</h1>
+          </div>
         </div>
       </SideBar>
     </div>
   );
-};
+}
 
-export default Home;
+export default Settings

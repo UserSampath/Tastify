@@ -6,21 +6,32 @@ import { IoLinkOutline } from "react-icons/io5";
 import { TbReportAnalytics } from "react-icons/tb";
 import "./side.css";
 import { CiSettings } from "react-icons/ci";
+import { useNavigate } from "react-router-dom";
 
-const SideBar = ({ children }) => {
-  const [open, setOpen] = useState(false);
+const SideBar = ({ children, selectedNav }) => {
+  const navigate = useNavigate();
+const [open, setOpen] = useState(
+  localStorage.getItem("sideBarOpen") == "true"
+);
+
   const Menus = [
-    { title: "User Management" },
-    { title: "Queue Management" },
-    { title: "IP Configuration" },
-    { title: "Report Generating" },
-    { title: "Settings" },
+    { title: "User Management", navigation: "/user_management" },
+    { title: "Queue Management", navigation: "/queue_management" },
+    { title: "IP Configuration", navigation: "/ip_configuration" },
+    { title: "Report Generating", navigation: "/report_generating" },
+    { title: "Settings", navigation: "/settings" },
   ];
+
+
+  const clickedSideButton = () => {
+    localStorage.setItem("sideBarOpen", !open);
+    setOpen(!open)
+  }
   return (
     <div className="d-flex" style={{ height: "100%", width: "100%" }}>
       <div
         style={{
-          width: open ? "230px" : "60px",
+          width: open ? "240px" : "60px",
           backgroundColor: "#ffffff",
           height: "100vh",
           padding: "5px",
@@ -42,7 +53,7 @@ const SideBar = ({ children }) => {
             zIndex: 1,
             backgroundColor: "white",
           }}
-          onClick={() => setOpen(!open)}>
+          onClick={clickedSideButton}>
           <FaChevronLeft
             color="gray"
             style={{
@@ -55,13 +66,16 @@ const SideBar = ({ children }) => {
         <div style={{ paddingTop: "70px" }}>
           {Menus.map((Menu, index) => (
             <div
+              key={index}
+              onClick={() => navigate(Menu.navigation)}
               className="d-flex  align-items-center sidebarButton mt-1"
               style={{
                 height: "40px",
-                backgroundColor: index === 0 ? "#f0f0f0ba" : "",
+                backgroundColor: Menu.title == selectedNav ? "#f0f0f0ba" : "",
                 justifyContent: open ? "left" : "center",
                 borderRadius: "2px",
-                borderRight: index === 0 ? "3px solid orange" : "",
+                borderRight:
+                  Menu.title == selectedNav ? "3px solid orange" : "",
               }}>
               <div
                 key={index}
@@ -72,7 +86,7 @@ const SideBar = ({ children }) => {
                 }}>
                 {Menu.title === "User Management" && <CiUser size={20} />}{" "}
                 {Menu.title === "Queue Management" && (
-                  <HiOutlineQueueList  size={20} />
+                  <HiOutlineQueueList size={20} />
                 )}{" "}
                 {Menu.title === "IP Configuration" && (
                   <IoLinkOutline size={20} />
