@@ -1,13 +1,10 @@
 import React from "react";
 import Navbars from "../../components/NavBar2/Navbar";
 import SideBar from "../../components/side/SideBar";
-import { MdDeleteOutline } from "react-icons/md";
-import { FaFacebookF } from "react-icons/fa6";
-import { FaAngleLeft } from "react-icons/fa6";
-import { FaAngleRight } from "react-icons/fa6";
 import UserDetails from "../../components/userDetails/UserDetails";
 import SearchBar from "../../components/searchBar/SearchBar";
 import "./userManagement.css"
+import Pagination from "../../components/pagination/Pagination";
 
 const UserManagement = () => {
   return (
@@ -16,47 +13,11 @@ const UserManagement = () => {
         <div>
           <Navbars />
 
-          <div className="d-flex justify-content-center">
+          <div className="d-flex justify-content-center mt-1">
             <div
               style={{ width: "90%", margin: 0 }}
               className="d-flex justify-content-between">
-              <div>
-                <div>
-                  <ul
-                    className="pagination"
-                    style={{ margin: 0, marginBottom: 0 }}>
-                    <li className="page-item ">
-                      <a
-                        className="page-link"
-                        href="#"
-                        tabIndex="-1"
-                        aria-disabled="true">
-                        <FaAngleLeft />
-                      </a>
-                    </li>
-                    <li className="page-item">
-                      <a className="page-link " href="#">
-                        1
-                      </a>
-                    </li>
-                    <li className="page-item active" aria-current="page">
-                      <a className="page-link" href="#">
-                        2
-                      </a>
-                    </li>
-                    <li className="page-item">
-                      <a className="page-link" href="#">
-                        3
-                      </a>
-                    </li>
-                    <li className="page-item">
-                      <a className="page-link" href="#">
-                        <FaAngleRight />
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              <Pagination />
               <div>
                 <SearchBar />
               </div>
@@ -66,7 +27,7 @@ const UserManagement = () => {
           <div className="d-flex justify-content-center align-items-center">
             <div
               style={{
-                height: `calc(100vh - 100px)`,
+                height: `calc(100vh - 115px)`,
                 width: "90%",
                 borderRadius: "5px",
               }}
@@ -99,6 +60,12 @@ const UserManagement = () => {
               <UserDetails />
               <UserDetails />
               <UserDetails />
+              <UserDetails />
+              <UserDetails />
+              <UserDetails />
+              <UserDetails />
+              <UserDetails />
+              
             </div>
           </div>
         </div>

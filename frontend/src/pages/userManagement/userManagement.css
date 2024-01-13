@@ -15,3 +15,12 @@
      color: rgb(91, 91, 91);
 }
 
+ .form-control::placeholder {
+    font-size: 16px; 
+  }
+
+  .userDetails-container:hover{
+    background-color: rgba(255, 243, 237, 0.742);
+    border-radius: 6px;
+    cursor:pointer;
+  }

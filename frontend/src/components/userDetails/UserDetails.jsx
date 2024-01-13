@@ -4,14 +4,13 @@ import { FaFacebookF } from "react-icons/fa6";
 const UserDetails = () => {
   return (
     <div
-      className="container-fluid"
+      className="container-fluid "
       style={{
-        // paddingLeft: "40px",
         borderBottom: "1px solid #ececec",
       }}>
       <div style={{ margin: "0px 10px 0px 30px" }}>
         <div
-          className="row align-items-center container-fluid"
+          className="row align-items-center container-fluid userDetails-container"
           style={{
             height: "45px",
             color: "#353434dd",
@@ -22,17 +21,22 @@ const UserDetails = () => {
               src="../../../image/Men.png"
               alt="user-avatar"
             />
-            <div style={{ fontWeight: "600" }}> Nalaka Sampath</div>
+            <div style={{ fontWeight: "600", fontSize: "16px" }}>
+              {" "}
+              Sasadari Shashiprabha
+            </div>
           </div>
-          <div className="col-3">2024 January 05</div>
+          <div className="col-3">
+            <div style={{ fontSize: "16px" }}>2024 January 05</div>
+          </div>
           <div className="col-3">
             <div
               className="d-inline-block"
               style={{
-                backgroundColor: "#d4dfff",
+                backgroundColor: "#d4dfff96",
                 padding: "2px 5px 2px 5px",
                 borderRadius: "4px",
-                color: "blue",
+                color: "#4848f7",
               }}>
               <div className="d-flex align-items-center ">
                 <FaFacebookF style={{ marginRight: "5px", fontSize: "14px" }} />
@@ -40,7 +44,9 @@ const UserDetails = () => {
               </div>
             </div>
           </div>
-          <div className="col-1">22</div>
+          <div className="col-1">
+            <div style={{ fontSize: "16px" }}>12</div>
+          </div>
           <div className="col-1" style={{ paddingLeft: "52px" }}>
             <div
               className="d-flex align-items-center justify-content-center"

@@ -24,7 +24,7 @@ const SearchBar = ({ inputSearchMembers, setFilteredUsers }) => {
       }}
       className="d-flex align-items-center">
       <input
-        style={{ width: "170px", height: "35px",  }}
+        style={{ width: "170px", height: "35px" }}
         type="text"
         className="form-control border-0 shadow-none bg-transparent"
         placeholder="Search Users.."
