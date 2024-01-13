@@ -6,6 +6,7 @@ import Swal from "sweetalert2";
 import validator from "validator";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import Food from "../../../image/Food.png";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -87,7 +88,7 @@ const SignUp = () => {
         <div className="signInBox">
           <div className="centerSignIn">
             <div className="signContainer2">
-              <h2>Sign Up</h2>
+              <h2>ADMIN SIGN UP</h2>
               <TextInput
                 type={"text"}
                 icon={"profile"}
@@ -111,7 +112,7 @@ const SignUp = () => {
               <TextInput
                 type={"email"}
                 icon={"mail"}
-                inputName={"email"}
+                inputName={"Email"}
                 placeholder={"Enter Email"}
                 value={email}
                 onChange={(value) => setEmail(value)}
@@ -130,16 +131,7 @@ const SignUp = () => {
                 onFocus={() => setPasswordError("")}
               />
 
-              <TextInput
-                type={"password"}
-                icon={"lock"}
-                inputName={"Registration Key"}
-                placeholder={"Enter Registration Key"}
-                value={registrationKey}
-                onChange={(value) => setRegistrationKey(value)}
-                errorMessage={registrationKeyError}
-                onFocus={() => setRegistrationKeyError("")}
-              />
+             
 
               <div className="buttonsContainer">
                 <Button
@@ -147,11 +139,17 @@ const SignUp = () => {
                   text="Sign Up"
                   onClick={signUpButtonClicked}
                 />
-                <Button
-                  onClick={() => navigate("/login")}
-                  type={"2"}
-                  text="Sign In"
-                />
+                <div className="newHereContainer">
+                <div>
+                  <div className="newHereButton">
+                    <Button
+                      onClick={() => navigate("/login")}
+                      type={"2"}
+                      text="Sign In"
+                    />
+                  </div>
+                </div>
+              </div>
               </div>
 
               <div></div>
@@ -164,10 +162,10 @@ const SignUp = () => {
             <div>
               <div className="imgContainerText">
                 <h2 className="whiteH2">Welcome to</h2>
-                <h1>Employee Management System</h1>
+                <h2 className="whiteH2">Tastyfy Admin Panel</h2>
                 <p>Register to create your account </p>
               </div>
-              <img className="signInImage" src="../../image/pic1.png" alt="" />
+              <img className="signInImage" src={Food} alt="" />
             </div>
           </div>
         </div>

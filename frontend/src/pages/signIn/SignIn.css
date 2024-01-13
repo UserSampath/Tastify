@@ -3,7 +3,15 @@ padding-top: 80px;
   /* padding-left: 80px;   */
   
 }
+.adminLog{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.adminLog h2 {
+  text-align: center;
+}
 .centerSignIn{
    display: flex;
   align-items: center;
@@ -30,16 +38,15 @@ cursor: pointer;
 }
 
 
-.imageContainer{
-  right: 0;
-  width: 55%;
-  height: 100;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* background-color: rebeccapurple; */
-
+.image-container {
+  width: 1000px;
+  height: 500px;
+  background-image: url('image/food.png'); /* Replace with the path to your image */
+  background-size: 1000px 500px;
+  position: relative;
 }
+
+
 
 .boxContainer{
   display: flex;
@@ -49,15 +56,32 @@ cursor: pointer;
 
 }
 
-.signInImage{
+#signInImage {
   width: 80%;
   margin-left: 10%;
+  transform-origin: top left;
+  transition: transform 0.5s ease;
+}
+
+.photo-container {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  perspective: 1000px; /* Perspective for 3D effect */
+}
+
+img {
+  width: 100%;
+  height: auto;
+  transition: transform 2s ease; /* You can adjust the duration and timing function */
 }
 
 
-.imgContainerText{
-  margin-left: 20px;
-  padding-top: 10px;
+
+
+.imgContainerTextSign{
+  padding: 50px;
+  margin-left: 100px;
 }
 
 .newHereContainer{
@@ -71,5 +95,17 @@ cursor: pointer;
   margin-top: 5px;
 }
 .whiteH2{
-  color: white !important;
+  color: var(--color2) !important;
+}
+.image{
+  width: 900px;
+  height:500px;
+}
+.newHereContainer {
+  display: flex;
+  justify-content: flex-end;  /* Align to the right */
+  align-items: flex-start;    /* Align to the top */
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }

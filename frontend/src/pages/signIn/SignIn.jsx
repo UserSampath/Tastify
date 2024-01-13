@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./SignIn.css";
 import TextInput from "../../components/TextInput/TextInput";
 import Button from "../../components/Button/Button";
@@ -6,6 +6,7 @@ import validator from "validator";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import axios from "axios";
+import Food from "../../../image/Food.png";
 const SignIn = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -13,6 +14,7 @@ const SignIn = () => {
   //errors
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
+ 
 
 
 const signInButtonClicked = async() => {
@@ -64,19 +66,22 @@ const signInButtonClicked = async() => {
 
 };
 
+
   return (
     <div className="signUpPage">
       <div className="boxContainer">
         <div className="signInBox">
           <div className="centerSignIn">
             <div className="signInContainer">
-              <h2>Sign In</h2>
+              <div className="adminLog">
+              <h2>ADMIN LOGIN</h2>
+              </div>
               <TextInput
                 type={"text"}
                 icon={"mail"}
-                inputName={"Email"}
-                placeholder={"Enter Email"}
+                placeholder={" Email"}
                 value={email}
+                inputName={"Email"}
                 onChange={(value) => setEmail(value)}
                 errorMessage={emailError}
                 onFocus={() => setEmailError("")}
@@ -84,8 +89,8 @@ const signInButtonClicked = async() => {
               <TextInput
                 type={"password"}
                 icon={"lock"}
+                placeholder={"Password"}
                 inputName={"Password"}
-                placeholder={"Enter Password"}
                 value={password}
                 onChange={(value) => setPassword(value)}
                 errorMessage={passwordError}
@@ -99,9 +104,8 @@ const signInButtonClicked = async() => {
                   text="Sign In"
                 />
               </div>
-              <div className="newHereContainer">
+              {/* <div className="newHereContainer">
                 <div>
-                  <h2>New Here?</h2>
                   <div className="newHereButton">
                     <Button
                       onClick={() => navigate("/register")}
@@ -110,20 +114,23 @@ const signInButtonClicked = async() => {
                     />
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
 
-        <div className="imageContainer">
+        <div className="imageContainerSignIn">
           <div className="imageBox">
             <div>
-              <div className="imgContainerText">
+              <div className="imgContainerTextSign">
                 <h2 className="whiteH2">Welcome to</h2>
-                <h1>Employee Management System</h1>
+                <h2 className="whiteH2"> Tastyfy Admin Panel</h2>
                 <p>Log in to access your account. </p>
               </div>
-              <img className="signInImage" src="../../image/pic1.png" alt="" />
+                          <div>
+              <img id="photo1" src={Food} alt="Photo 1"  className="image" />
+            </div>
+
             </div>
           </div>
         </div>
