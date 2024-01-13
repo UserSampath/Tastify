@@ -97,7 +97,6 @@ p{
   max-width: 100% !important;
   /* max-height: 450px; */
   min-height: 100% !important;
-  background-color: var(--color2) !important;
   position: absolute !important;
   top: 50% ;
   left: 50%;

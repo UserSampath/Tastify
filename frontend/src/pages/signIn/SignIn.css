@@ -38,19 +38,15 @@ cursor: pointer;
 }
 
 
-.imageContainerSignIn{
-  right: 0;
-  width: 55%;
-  height: 100;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-
-  /* Add a border to visualize the effect */
-
-
+.image-container {
+  width: 1000px;
+  height: 500px;
+  background-image: url('image/food.png'); /* Replace with the path to your image */
+  background-size: 1000px 500px;
+  position: relative;
 }
+
+
 
 .boxContainer{
   display: flex;
@@ -80,23 +76,12 @@ img {
   transition: transform 2s ease; /* You can adjust the duration and timing function */
 }
 
-#photo2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transform: rotateX(180deg); /* Initial upside-down position */
-}
-
-.rotateAnimation {
-  transform: rotateX(180deg); /* Rotate to upside-down position */
-  opacity: 1; /* Make the second photo visible */
-}
 
 
-.imgContainerText{
-  margin-left: 10px;
-  padding: 10px;
+
+.imgContainerTextSign{
+  padding: 50px;
+  margin-left: 100px;
 }
 
 .newHereContainer{
@@ -110,9 +95,12 @@ img {
   margin-top: 5px;
 }
 .whiteH2{
-  color: white !important;
+  color: var(--color2) !important;
 }
-
+.image{
+  width: 900px;
+  height:500px;
+}
 .newHereContainer {
   display: flex;
   justify-content: flex-end;  /* Align to the right */

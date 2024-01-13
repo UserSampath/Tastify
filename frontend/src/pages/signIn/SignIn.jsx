@@ -104,7 +104,7 @@ const signInButtonClicked = async() => {
                   text="Sign In"
                 />
               </div>
-              <div className="newHereContainer">
+              {/* <div className="newHereContainer">
                 <div>
                   <div className="newHereButton">
                     <Button
@@ -114,7 +114,7 @@ const signInButtonClicked = async() => {
                     />
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -122,12 +122,15 @@ const signInButtonClicked = async() => {
         <div className="imageContainerSignIn">
           <div className="imageBox">
             <div>
-              <div className="imgContainerText">
+              <div className="imgContainerTextSign">
                 <h2 className="whiteH2">Welcome to</h2>
                 <h2 className="whiteH2"> Tastyfy Admin Panel</h2>
                 <p>Log in to access your account. </p>
               </div>
-              <img id="photo1" src={Food} alt="Photo 1" />
+                          <div>
+              <img id="photo1" src={Food} alt="Photo 1"  className="image" />
+            </div>
+
             </div>
           </div>
         </div>
