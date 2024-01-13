@@ -127,8 +127,8 @@ const signInButtonClicked = async() => {
                 <h2 className="whiteH2"> Tastyfy Admin Panel</h2>
                 <p>Log in to access your account. </p>
               </div>
-                          <div>
-              <img id="photo1" src={Food} alt="Photo 1"  className="image" />
+              <div>
+              <img  id="photo1" src={Food} alt="Photo 1"  className="image" style={{width:"650px",height:"500px"}} />
             </div>
 
             </div>

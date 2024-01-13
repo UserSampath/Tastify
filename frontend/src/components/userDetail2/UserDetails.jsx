@@ -13,7 +13,7 @@ import "./userDetails.css"
 const UserDetails = ({ user, onUserDeleted, getUserData, onClick }) => {
   const [show, setShow] = useState(false);
   const [showDelete, setDeleteShow] = useState(false);
-  const [selectedUser, setSelectedUser] = useState(null); // New state for selected user
+  const [selectedUser, setSelectedUser] = useState(null); 
 
   const handleClose = () => setShow(false);
   const handleShow = (e) => {

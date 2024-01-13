@@ -1,0 +1,17 @@
+.pagination .page-item.active .page-link {
+    background-color: #faefe1; /* Change this to the desired background color */
+    color: #ff7700; /* Change this to the desired text color */
+    border: #ff7700;
+    
+}
+
+
+
+
+
+.page-item a{
+    outline: none !important;
+     box-shadow: none !important; 
+     color: rgb(91, 91, 91);
+}
+

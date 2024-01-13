@@ -1,29 +1,36 @@
-import React, { useState, useEffect } from "react";
-import Modal from "react-bootstrap/Modal";
-import Button from "react-bootstrap/esm/Button";
-import Star from "../Star/Star";
+import React, { useState, useEffect } from 'react';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/esm/Button';
+import Star from '../Star/Star';
 import "./Modal.css";
-import axios from "axios";
+import axios from 'axios';
 import { IoIosClose } from "react-icons/io";
 import { VscDebugBreakpointLogUnverified } from "react-icons/vsc";
 
 const Modals = ({ data }) => {
+
+
   useEffect(() => {
     const modalTimeout = setTimeout(() => {
-      document.querySelector(".modal").classList.remove("show");
+      document.querySelector('.modal').classList.remove('show');
     }, 5000);
 
     return () => clearTimeout(modalTimeout);
   }, []);
 
+
+
+  
+
+  
+
   return (
     <div>
       <Modal.Dialog
-        className="modal-lg"
-        centered
-        style={{ borderRadius: "10px" }}>
-        <Modal.Body
-          style={{ backgroundColor: "#fcfcfc", borderRadius: "10px" }}>
+      className="modal-lg"
+      centered style={{  borderRadius: "10px" }}>
+      <Modal.Body style={{ backgroundColor: "#fcfcfc", borderRadius: "10px" }}>
+  
           <div
             className=" d-flex"
             style={{
@@ -33,6 +40,7 @@ const Modals = ({ data }) => {
               padding: "0px",
               borderRadius: "10px",
               boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)", // Add box shadow
+
             }}>
             <div
               style={{
@@ -46,7 +54,11 @@ const Modals = ({ data }) => {
                 <div>
                   <div className="d-flex justify-content-center align-items-center">
                     <img
-                      src={data.Image ? data.Image : "../../../image/Men.png"}
+                      src={
+                        data.Image
+                          ? data.Image
+                          : "../../../image/Men.png"
+                      }
                       alt=""
                       style={{
                         borderRadius: "100px",
@@ -58,6 +70,7 @@ const Modals = ({ data }) => {
                   </div>
                   <div className="d-flex justify-content-center align-items-center">
                     <h4 style={{ fontSize: "20px", color: "#00a500" }}>
+                    
                       {data.lastName &&
                         data.firstName &&
                         `${data.firstName} ${data.lastName}`}
@@ -147,11 +160,7 @@ const Modals = ({ data }) => {
               <div
                 style={{ width: "100%", backgroundColor: "#ccfac8" }}
                 className="d-flex">
-                <div
-                  style={{
-                    width: "30%",
-                    borderRight: "4px solid lightGreen ",
-                  }}>
+                <div style={{ width: "30%", borderRight: "4px solid lightGreen " }}>
                   <strong className="d-flex justify-content-center align-items-center">
                     Teams
                   </strong>
@@ -184,8 +193,9 @@ const Modals = ({ data }) => {
               </div>
             </div>
           </div>
-        </Modal.Body>
-      </Modal.Dialog>
+        
+      </Modal.Body>
+    </Modal.Dialog>
     </div>
   );
 };
