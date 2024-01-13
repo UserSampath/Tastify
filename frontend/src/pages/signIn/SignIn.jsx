@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import "./SignIn.css";
 import TextInput from "../../components/TextInput/TextInput";
 import Button from "../../components/Button/Button";
@@ -14,6 +14,7 @@ const SignIn = () => {
   //errors
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
+ 
 
 
 const signInButtonClicked = async() => {
@@ -65,6 +66,7 @@ const signInButtonClicked = async() => {
 
 };
 
+
   return (
     <div className="signUpPage">
       <div className="boxContainer">
@@ -80,7 +82,6 @@ const signInButtonClicked = async() => {
                 placeholder={" Email"}
                 value={email}
                 inputName={"Email"}
-
                 onChange={(value) => setEmail(value)}
                 errorMessage={emailError}
                 onFocus={() => setEmailError("")}
@@ -90,7 +91,6 @@ const signInButtonClicked = async() => {
                 icon={"lock"}
                 placeholder={"Password"}
                 inputName={"Password"}
-
                 value={password}
                 onChange={(value) => setPassword(value)}
                 errorMessage={passwordError}
@@ -127,7 +127,7 @@ const signInButtonClicked = async() => {
                 <h2 className="whiteH2"> Tastyfy Admin Panel</h2>
                 <p>Log in to access your account. </p>
               </div>
-              <img className="signInImage" src={Food} alt="" />
+              <img id="photo1" src={Food} alt="Photo 1" />
             </div>
           </div>
         </div>

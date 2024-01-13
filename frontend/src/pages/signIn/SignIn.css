@@ -60,9 +60,37 @@ cursor: pointer;
 
 }
 
-.signInImage{
+#signInImage {
   width: 80%;
   margin-left: 10%;
+  transform-origin: top left;
+  transition: transform 0.5s ease;
+}
+
+.photo-container {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  perspective: 1000px; /* Perspective for 3D effect */
+}
+
+img {
+  width: 100%;
+  height: auto;
+  transition: transform 2s ease; /* You can adjust the duration and timing function */
+}
+
+#photo2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: rotateX(180deg); /* Initial upside-down position */
+}
+
+.rotateAnimation {
+  transform: rotateX(180deg); /* Rotate to upside-down position */
+  opacity: 1; /* Make the second photo visible */
 }
 
 
