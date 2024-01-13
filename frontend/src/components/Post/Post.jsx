@@ -1,6 +1,6 @@
 // ServiceComponent.jsx
 import React,{useState} from 'react';
-
+import "./Post.css"
 const Post = ({ posts }) => {
     const [selectedPost, setSelectedPost] = useState(null);
 
@@ -9,7 +9,7 @@ const Post = ({ posts }) => {
     };
   
     return (
-      <div style={{ marginTop: '14px', display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '12px' }}>
+      <div  className='mainContainner' >
         {posts.map(post => (
           <div
             key={post.id}
@@ -24,34 +24,26 @@ const Post = ({ posts }) => {
               transform: selectedPost === post.id ? 'translateY(-5px)' : 'none', // Apply the transform when the card is selected
             }}
           >
-            <div style={{ borderRadius: '8px', overflow: 'hidden' }}>
-              <img src={post.image} alt="" style={{ width: '100%', height: '150px', objectFit: 'cover', borderTopLeftRadius: '8px', borderTopRightRadius: '8px' }} />
+            <div  className= "imagediv">
+              <img src={post.image} alt="" className='image'  />
             </div>
-            <div style={{ padding: '8px', backgroundColor: '#fff', borderRadius: '0 0 8px 8px', height: '80px', overflow: 'hidden' }}>
+            <div  className ="detaildiv">
               
-              <h4 style={{ fontSize: '1rem', fontWeight: 'bold', color: '#333', marginBottom: '8px' }}>{post.title}</h4>
-              <p style={{ fontSize: '0.55rem', color: '#333', marginBottom: '12px' }}>Create Date : {post.CreatedDate}</p>
+              <h4  className = "title" >{post.title}</h4>
+              <p  className ="tag" >Create Date : {post.CreatedDate}</p>
 
-              <p style={{ fontSize: '0.55rem', color: '#333', marginBottom: '12px' }}>{post.description}</p>
-              <p style={{ fontSize: '0.55rem', color: '#333', marginBottom: '12px' }}>Create Date : {post.CreatedDate}</p>
+              <p className ="tag" >{post.description}</p>
 
             </div>
             {selectedPost === post.id && (
               <div
-                style={{
-                  position: 'absolute',
-                  bottom: '0',
-                  left: '50%',
-                  transform: 'translateX(-50%)',
-                  width: '90%',
-                  height: '3px',
-                  backgroundColor: 'blue',
-                  transition: 'height 0.3s ease-out', // Add a transition for smooth animation
-                }}
+              className='blueline'
+              
               ></div>
             )}
             <div
-              style={{ position: 'absolute', bottom: '0', left: '0', width: '100%', height: '100%', cursor: 'pointer' }}
+            className='animation'
+              
               onClick={() => handleCardClick(post.id)}
             ></div>
           </div>
