@@ -70,11 +70,6 @@ cursor: pointer;
   perspective: 1000px; /* Perspective for 3D effect */
 }
 
-.image {
-  width: 100%;
-  height: auto;
-  transition: transform 2s ease; /* You can adjust the duration and timing function */
-}
 
 
 
