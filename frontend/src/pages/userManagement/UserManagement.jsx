@@ -136,13 +136,13 @@ const UserManagement = () => {
                       fontWeight: "600",
                     }}>
                     <div className="col-4 ">
-                      <div style={{ marginLeft: "50px" }}>Name</div>
+                      <div style={{ marginLeft: "45px" }}>Name</div>
                     </div>
                     <div className="col-3">Joined Date </div>
                     <div className="col-3">
-                      <p>login method</p>
+                      <p>Login Method</p>
                     </div>
-                    <div className="col-1">posts</div>
+                    <div className="col-1">Posts</div>
                   </div>
                 </div>
               </div>
