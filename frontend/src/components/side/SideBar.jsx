@@ -100,6 +100,7 @@ const [open, setOpen] = useState(
                     display: !open ? "none" : "inline",
                     transformOrigin: "left",
                     transitionDuration: "200ms",
+                    fontWeight: "600",
                   }}>
                   {Menu.title}
                 </span>

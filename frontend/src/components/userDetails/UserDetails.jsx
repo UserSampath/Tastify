@@ -1,46 +1,48 @@
 import React from 'react'
 import { MdDeleteOutline } from "react-icons/md";
-import { FaFacebookF } from "react-icons/fa6";
-const UserDetails = () => {
+
+import LoginMethodTag from '../loginMethodTag/LoginMethodTag';
+const UserDetails = ({user}) => {
   return (
     <div
-      className="container-fluid"
+      className="container-fluid "
       style={{
-        // paddingLeft: "40px",
         borderBottom: "1px solid #ececec",
       }}>
       <div style={{ margin: "0px 10px 0px 30px" }}>
         <div
-          className="row align-items-center container-fluid"
+          className="row align-items-center container-fluid userDetails-container"
           style={{
             height: "45px",
             color: "#353434dd",
           }}>
           <div className="col-4 d-flex align-items-center">
             <img
-              style={{ height: "40px", marginRight: "10px" }}
-              src="../../../image/Men.png"
+              style={{
+                height: "35px",
+                width: "35px",
+                marginRight: "10px",
+                objectFit: "cover",
+                borderRadius: "50%",
+              }}
+              src={user.image}
               alt="user-avatar"
             />
-            <div style={{ fontWeight: "600" }}> Nalaka Sampath</div>
-          </div>
-          <div className="col-3">2024 January 05</div>
-          <div className="col-3">
             <div
-              className="d-inline-block"
               style={{
-                backgroundColor: "#d4dfff",
-                padding: "2px 5px 2px 5px",
-                borderRadius: "4px",
-                color: "blue",
-              }}>
-              <div className="d-flex align-items-center ">
-                <FaFacebookF style={{ marginRight: "5px", fontSize: "14px" }} />
-                <div style={{ fontSize: "14px" }}>Facebook</div>
-              </div>
-            </div>
+                fontWeight: "600",
+                fontSize: "16px",
+              }}>{`${user.firstName} ${user.lastName}`}</div>
           </div>
-          <div className="col-1">22</div>
+          <div className="col-3">
+            <div style={{ fontSize: "16px" }}>{user.joinedDate}</div>
+          </div>
+          <div className="col-3">
+           <LoginMethodTag loginMethod={user.loginMethod}/>
+          </div>
+          <div className="col-1">
+            <div style={{ fontSize: "16px" }}>{user.posts}</div>
+          </div>
           <div className="col-1" style={{ paddingLeft: "52px" }}>
             <div
               className="d-flex align-items-center justify-content-center"

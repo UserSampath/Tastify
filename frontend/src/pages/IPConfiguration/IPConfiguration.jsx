@@ -1,5 +1,5 @@
-import React from 'react'
-import Navbars from "../../components/NavBar2/Navbar";
+import React from "react";
+import NavBar from "../../components/NavBar2/Navbar";
 import SideBar from "../../components/side/SideBar";
 
 const IPConfiguration = () => {
@@ -7,7 +7,7 @@ const IPConfiguration = () => {
     <div>
       <SideBar selectedNav="IP Configuration">
         <div>
-          <Navbars />
+          <NavBar />
           <div>
             <h1>vdff</h1>
           </div>
@@ -15,6 +15,6 @@ const IPConfiguration = () => {
       </SideBar>
     </div>
   );
-}
+};
 
-export default IPConfiguration
+export default IPConfiguration;

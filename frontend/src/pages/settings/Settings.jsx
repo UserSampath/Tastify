@@ -1,5 +1,5 @@
-import React from 'react'
-import Navbars from "../../components/NavBar2/Navbar";
+import React from "react";
+import NavBar from "../../components/NavBar2/Navbar";
 import SideBar from "../../components/side/SideBar";
 
 const Settings = () => {
@@ -7,7 +7,7 @@ const Settings = () => {
     <div>
       <SideBar selectedNav="Settings">
         <div>
-          <Navbars />
+          <NavBar />
           <div>
             <h1>Settings</h1>
           </div>
@@ -15,6 +15,6 @@ const Settings = () => {
       </SideBar>
     </div>
   );
-}
+};
 
-export default Settings
+export default Settings;

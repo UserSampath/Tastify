@@ -8,9 +8,8 @@ import Logo from "../../../image/logo.png";
 import LogOutButton from "../LogOutButton/LogOutButton";
 import { useNavigate } from "react-router-dom";
 import { IoMdNotificationsOutline } from "react-icons/io";
-const Navbars = () => {
-
-  const navigate = useNavigate()
+const NavBar = () => {
+  const navigate = useNavigate();
   const [showLogOut, setShowLogOut] = useState(false);
 
   const clickedLogOut = () => {
@@ -21,7 +20,7 @@ const Navbars = () => {
   };
 
   return (
-    <div >
+    <div>
       <Navbar expand="lg" className="nav" style={{ height: "50px" }}>
         <Navbar.Brand
           href="#home"
@@ -45,9 +44,13 @@ const Navbars = () => {
           <span style={{ color: "#6b6b6b", fontWeight: "600" }}>
             <div style={{ marginRight: "40px", fontWeight: "100" }}>
               <div className="d-flex align-items-center">
-                <IoMdNotificationsOutline className="m-2" size={28}/>
-                <img src="../../../image/Men.png" alt="" style={{height:"42px"}} />
-            </div>
+                <IoMdNotificationsOutline className="m-2" size={28} />
+                <img
+                  src="../../../image/Men.png"
+                  alt=""
+                  style={{ height: "42px" }}
+                />
+              </div>
             </div>
           </span>
         </Navbar.Collapse>
@@ -56,4 +59,4 @@ const Navbars = () => {
   );
 };
 
-export default Navbars;
+export default NavBar;

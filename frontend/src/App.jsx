@@ -10,6 +10,7 @@ import IPConfiguration from "./pages/IPConfiguration/IPConfiguration";
 import ReportGenerating from "./pages/reportGenerating/ReportGenerating";
 import Settings from "./pages/settings/Settings";
 import ShowPost from "./pages/ShowPost/ShowPost";
+import Post from "./pages/post/Post";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/ip_configuration" element={<IPConfiguration />}></Route>
         <Route path="/report_generating" element={<ReportGenerating />}></Route>
         <Route path="/settings" element={<Settings />}></Route>
+        <Route path="/post" element={<Post />}></Route>
       </Routes>
     </BrowserRouter>
   );
