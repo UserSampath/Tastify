@@ -1,6 +1,8 @@
 // ServiceComponent.jsx
 import React,{useState} from 'react';
-import "./Post.css"
+import "./Post.css";
+import { Link } from 'react-router-dom';
+import { FcLike } from "react-icons/fc";
 const Post = ({ posts }) => {
     const [selectedPost, setSelectedPost] = useState(null);
 
@@ -24,16 +26,24 @@ const Post = ({ posts }) => {
               transform: selectedPost === post.id ? 'translateY(-5px)' : 'none', // Apply the transform when the card is selected
             }}
           >
+                      <Link to={`/post/${post.id}`} className="post-link">
+
             <div  className= "imagediv">
               <img src={post.image} alt="" className='image'  />
             </div>
             <div  className ="detaildiv">
-              
-              <h4  className = "title" >{post.title}</h4>
-              <p  className ="tag" >Create Date : {post.CreatedDate}</p>
-
-              <p className ="tag" >{post.description}</p>
-
+            <div className="title-likes-container">
+                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                  <div>
+                    <h4 className="title">{post.title}</h4>
+                    <p className="tag">Create Date: {post.CreatedDate}</p>
+                    <p className="tag">{post.description}</p>
+                  </div>
+                  <div className="likes-container">
+                    <FcLike style={{ marginRight: '5px' }}/> <p className="liketag">{post.likes}</p>
+                  </div>
+                </div>
+              </div>
             </div>
             {selectedPost === post.id && (
               <div
@@ -46,6 +56,8 @@ const Post = ({ posts }) => {
               
               onClick={() => handleCardClick(post.id)}
             ></div>
+                      </Link>
+
           </div>
         ))}
       </div>
