@@ -1,12 +1,12 @@
-import React from 'react'
-import Navbars from "../../components/NavBar2/Navbar";
+import React from "react";
+import NavBar from "../../components/NavBar2/Navbar";
 import SideBar from "../../components/side/SideBar";
 const ReportGenerating = () => {
   return (
     <div>
       <SideBar selectedNav="Report Generating">
         <div>
-          <Navbars />
+          <NavBar />
           <div>
             <h1>Report Generating</h1>
           </div>
@@ -14,6 +14,6 @@ const ReportGenerating = () => {
       </SideBar>
     </div>
   );
-}
+};
 
-export default ReportGenerating
+export default ReportGenerating;

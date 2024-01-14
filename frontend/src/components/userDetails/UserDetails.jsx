@@ -1,7 +1,8 @@
 import React from 'react'
 import { MdDeleteOutline } from "react-icons/md";
-import { FaFacebookF } from "react-icons/fa6";
-const UserDetails = () => {
+
+import LoginMethodTag from '../loginMethodTag/LoginMethodTag';
+const UserDetails = ({user}) => {
   return (
     <div
       className="container-fluid "
@@ -17,35 +18,30 @@ const UserDetails = () => {
           }}>
           <div className="col-4 d-flex align-items-center">
             <img
-              style={{ height: "40px", marginRight: "10px" }}
-              src="../../../image/Men.png"
+              style={{
+                height: "35px",
+                width: "35px",
+                marginRight: "10px",
+                objectFit: "cover",
+                borderRadius: "50%",
+              }}
+              src={user.image}
               alt="user-avatar"
             />
-            <div style={{ fontWeight: "600", fontSize: "16px" }}>
-              {" "}
-              Sasadari Shashiprabha
-            </div>
-          </div>
-          <div className="col-3">
-            <div style={{ fontSize: "16px" }}>2024 January 05</div>
-          </div>
-          <div className="col-3">
             <div
-              className="d-inline-block"
               style={{
-                backgroundColor: "#d4dfff96",
-                padding: "2px 5px 2px 5px",
-                borderRadius: "4px",
-                color: "#4848f7",
-              }}>
-              <div className="d-flex align-items-center ">
-                <FaFacebookF style={{ marginRight: "5px", fontSize: "14px" }} />
-                <div style={{ fontSize: "14px" }}>Facebook</div>
-              </div>
-            </div>
+                fontWeight: "600",
+                fontSize: "16px",
+              }}>{`${user.firstName} ${user.lastName}`}</div>
+          </div>
+          <div className="col-3">
+            <div style={{ fontSize: "16px" }}>{user.joinedDate}</div>
+          </div>
+          <div className="col-3">
+           <LoginMethodTag loginMethod={user.loginMethod}/>
           </div>
           <div className="col-1">
-            <div style={{ fontSize: "16px" }}>12</div>
+            <div style={{ fontSize: "16px" }}>{user.posts}</div>
           </div>
           <div className="col-1" style={{ paddingLeft: "52px" }}>
             <div
