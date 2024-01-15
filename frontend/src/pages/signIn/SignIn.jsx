@@ -69,7 +69,7 @@ const signInButtonClicked = async() => {
 
   return (
     <div className="signUpPage">
-      <div className="boxContainer">
+      <div className="boxContainer" >
         <div className="signInBox "  style={{height:"600px"}} >
           <div className="centerSignIn">
             <div className="signInContainer">
