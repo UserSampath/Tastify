@@ -20,8 +20,11 @@ const NavBar = () => {
   };
 
   return (
-    <div>
-      <Navbar expand="lg" className="nav" style={{ height: "50px" }}>
+    <div className="navContainer">
+      <Navbar
+        expand="lg"
+        className="nav"
+        style={{ height: "50px", width: "100%" }}>
         <Navbar.Brand
           href="#home"
           className="d-flex align-items-center ms-auto">
