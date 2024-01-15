@@ -75,7 +75,7 @@ const [open, setOpen] = useState(
                 justifyContent: open ? "left" : "center",
                 borderRadius: "2px",
                 borderRight:
-                  Menu.title == selectedNav ? "3px solid orange" : "",
+                  Menu.title == selectedNav ? "3px solid #990000" : "",
               }}>
               <div
                 key={index}
@@ -85,9 +85,7 @@ const [open, setOpen] = useState(
                   fontSize: "15px",
                 }}>
                 {Menu.title === "User Management" && <CiUser size={20} />}{" "}
-                {Menu.title === "All Post" && (
-                  <HiOutlineQueueList size={20} />
-                )}{" "}
+                {Menu.title === "All Post" && <HiOutlineQueueList size={20} />}{" "}
                 {Menu.title === "IP Configuration" && (
                   <IoLinkOutline size={20} />
                 )}{" "}

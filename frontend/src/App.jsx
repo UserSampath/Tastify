@@ -1,10 +1,8 @@
 import "./app.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SignIn from "./pages/signIn/SignIn";
-import SignUp from "./pages/signUp/SignUp";
 import UserManagement from "./pages/userManagement/UserManagement";
 import "bootstrap/dist/css/bootstrap.min.css";
-import SideBar from "./components/side/SideBar";
 import AllPost from "./pages/AllPost/AllPost";
 import IPConfiguration from "./pages/IPConfiguration/IPConfiguration";
 import ReportGenerating from "./pages/reportGenerating/ReportGenerating";
@@ -96,15 +94,10 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/login" element={<SignIn />}></Route>
-        {/* <Route path="/register" element={<SignUp />}></Route> */}
         <Route path="/show_post" element={<ShowPost posts={posts} />} />
         <Route path="/post/:postId" element={<PostDetails posts={posts} />} />
-
-
-
         <Route path="all_post" element={<AllPost posts={posts}/>}></Route>
         <Route path="/user_Management" element={<UserManagement />}></Route>
-        
         <Route path="/ip_configuration" element={<IPConfiguration />}></Route>
         <Route path="/report_generating" element={<ReportGenerating />}></Route>
         <Route path="/settings" element={<Settings />}></Route>

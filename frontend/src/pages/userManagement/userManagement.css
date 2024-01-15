@@ -1,7 +1,7 @@
 .pagination .page-item.active .page-link {
-    background-color: #faefe1; /* Change this to the desired background color */
-    color: #ff7700; /* Change this to the desired text color */
-    border: #ff7700;
+    background-color: #ffdcdc; /* Change this to the desired background color */
+    color: #990000; /* Change this to the desired text color */
+    border: #990000;
     
 }
 
@@ -20,7 +20,7 @@
   }
 
   .userDetails-container:hover{
-    background-color: rgba(255, 243, 237, 0.742);
+    background-color: #f9eeee82;
     border-radius: 6px;
     cursor:pointer;
   }

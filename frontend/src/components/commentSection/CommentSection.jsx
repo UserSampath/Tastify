@@ -10,6 +10,7 @@ const CommentSection = () => {
         borderRadius: "10px",
         padding: "10px",
         backgroundColor: "#ffffffd2",
+        marginBottom: "30px",
       }}>
       <Comment />
       <Comment />

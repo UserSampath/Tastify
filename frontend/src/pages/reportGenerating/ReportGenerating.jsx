@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from "../../components/NavBar2/Navbar";
+import NavBar from "../../components/NavBar/Navbar";
 import SideBar from "../../components/side/SideBar";
 const ReportGenerating = () => {
   return (
