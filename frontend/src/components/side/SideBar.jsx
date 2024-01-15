@@ -16,7 +16,7 @@ const [open, setOpen] = useState(
 
   const Menus = [
     { title: "User Management", navigation: "/user_management" },
-    { title: "Queue Management", navigation: "/queue_management" },
+    { title: "All Post", navigation: "/all_post" },
     { title: "IP Configuration", navigation: "/ip_configuration" },
     { title: "Report Generating", navigation: "/report_generating" },
     { title: "Settings", navigation: "/settings" },
@@ -85,7 +85,7 @@ const [open, setOpen] = useState(
                   fontSize: "15px",
                 }}>
                 {Menu.title === "User Management" && <CiUser size={20} />}{" "}
-                {Menu.title === "Queue Management" && (
+                {Menu.title === "All Post" && (
                   <HiOutlineQueueList size={20} />
                 )}{" "}
                 {Menu.title === "IP Configuration" && (

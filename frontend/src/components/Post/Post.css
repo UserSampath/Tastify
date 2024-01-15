@@ -1,6 +1,7 @@
 .imagediv {
     border-radius: 8px;
     overflow: hidden;
+    margin-right: 10px;
 }
 
 .image {
@@ -70,4 +71,12 @@
     display: flex;
 
   }
-  
+  .showposttitle{
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #333;
+  }
+  .Createdate{
+    font-size: 0.6rem;
+    color: #333;
+  }

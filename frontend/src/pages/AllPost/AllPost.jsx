@@ -1,17 +1,23 @@
 import React from "react";
 import NavBar from "../../components/NavBar2/Navbar";
 import SideBar from "../../components/side/SideBar";
-const QueueManagement = () => {
+import AllPostsCom from "../../components/AllPostsCom/AllPostsCom";
+
+const AllPost = ({posts}) => {
+
+
+  
+
   return (
     <div>
-      <SideBar selectedNav="Queue Management">
+      <SideBar selectedNav="AllPost">
         <div>
           <NavBar />
-          <h1>Queue Management</h1>
+          <AllPostsCom posts={posts}/>
         </div>
       </SideBar>
     </div>
   );
 };
 
-export default QueueManagement;
+export default AllPost;

@@ -8,6 +8,9 @@ padding-top: 80px;
   align-items: center;
   justify-content: center;
 }
+.imageContainerSignIn{
+  background-color : var(--color2);
+}
 
 .adminLog h2 {
   text-align: center;
@@ -90,7 +93,7 @@ cursor: pointer;
   margin-top: 5px;
 }
 .whiteH2{
-  color: var(--color2) !important;
+  color: var(--color3) !important;
 }
 .image{
   width: 900px;
