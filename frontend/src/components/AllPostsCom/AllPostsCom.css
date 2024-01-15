@@ -1,0 +1,120 @@
+.imagediv {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.image {
+    width: 90%;
+    height: 150px;
+    object-fit: cover;
+   border-radius:15px;
+    margin-left:12px;
+}
+
+.detail {
+    padding: 8px;
+    height: 85px;
+    overflow: hidden;
+}
+
+.tag {
+    font-size: 0.55rem;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+
+.liketag {
+    font-size: 0.85rem;
+    color: #333;
+    margin-top: 15px;
+}
+
+.animation {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.posttitle {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #333;
+}
+.blueline {
+    position: absolute;
+    bottom: 5px; /* Adjust the bottom offset as needed */
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--color2);
+    transition: height 0.3s ease-out;
+}
+.maindetail {
+    background-color: #fff;
+    border-radius:  5px;
+}
+.mainContainner{
+    margin-top: 14px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    overflow: auto;
+    
+}
+.title-likes-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .likes-container {
+    margin-left: auto;
+    display: flex;
+
+  }
+
+.profileContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+.profileImage {
+    width: 40px; /* Set the width as needed */
+    height: 40px; /* Set the height as needed */
+    border-radius: 60%; /* Makes the image rounded */
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: 5px;
+    padding:2px /* Adjust margin as needed */
+  }
+  
+.tagName {
+    font-weight:semi-bold;
+    color: #333;
+    font-size: 0.85rem;
+
+    /* Additional styling for the name */
+  }
+
+  .titlediv {
+    display: flex; /* Make the main container flexbox */
+    flex-direction: column;
+    padding-left:10px;
+    padding-bottom:5px; /* Arrange elements vertically */
+  }
+  
+  .title-and-likes {
+    display: flex; /* Make the title and likes container flexbox */
+    align-items: center;
+    padding-right:10px;
+    padding-top:5px;
+    /* Align items vertically */
+  }
+  
+  .date{
+    font-size: 0.55rem;
+    color: #333;
+  }

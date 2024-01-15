@@ -8,6 +8,9 @@ padding-top: 80px;
   align-items: center;
   justify-content: center;
 }
+.imageContainerSignIn{
+  background-color : var(--color2);
+}
 
 .adminLog h2 {
   text-align: center;
@@ -90,7 +93,7 @@ cursor: pointer;
   margin-top: 5px;
 }
 .whiteH2{
-  color: var(--color2) !important;
+  color: var(--color3) !important;
 }
 .image{
   width: 900px;
@@ -103,4 +106,39 @@ cursor: pointer;
   position: absolute;
   top: 20px;
   right: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  /* Hide the imageContainerSignIn when the screen width is 768px or less */
+  .imageContainerSignIn {
+    display: none;
+  }
+
+  .signInContainer{
+    padding-top:50px;
+  }
+
+  .inputbox{
+    display: flex;
+      flex-direction: column;
+      align-items: center; /* Center items horizontally */
+      justify-content: center; 
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  /* Apply styles for mobile view */
+  .ContainerTextSign {
+    display: block; 
+    color:var(--color2);
+    margin-bottom:90px;/* Show ContainerTextSign in mobile view */
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  /* Apply styles for web view (screen width greater than 768px) */
+  .ContainerTextSign {
+    display: none; 
+   /* Hide ContainerTextSign in web view */
+  }
 }
