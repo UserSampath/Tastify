@@ -124,7 +124,7 @@ const signInButtonClicked = async() => {
                 <p >Log in to access your account. </p>
               </div>
               <div>
-              <img  id="photo1" src={Food} alt="Photo 1"  className="image" style={{width:"650px",height:"490px" ,marginLeft:"120px"}} />
+              <img  id="photo1" src={Food} alt="Photo 1"  className="image" style={{width:"650px",height:"270px" ,marginLeft:"120px"}} />
             </div>
             </div>
           </div>

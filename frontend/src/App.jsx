@@ -1,10 +1,8 @@
 import "./app.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SignIn from "./pages/signIn/SignIn";
-import SignUp from "./pages/signUp/SignUp";
 import UserManagement from "./pages/userManagement/UserManagement";
 import "bootstrap/dist/css/bootstrap.min.css";
-import SideBar from "./components/side/SideBar";
 import AllPost from "./pages/AllPost/AllPost";
 import IPConfiguration from "./pages/IPConfiguration/IPConfiguration";
 import ReportGenerating from "./pages/reportGenerating/ReportGenerating";
@@ -18,7 +16,7 @@ function App() {
       id: 1,
       title: "Spaghetti",
       description:
-        "Spaghetti is a classic Italian pasta that is long, thin, and cylindrical. It is made from durum wheat semolina and water. It is often served al dente, meaning it has a firm bite. Spaghetti is versatile and pairs well with a variety of sauces, such as marinara, Bolognese, or carbonara. It is a staple in Italian cuisine and loved worldwide for its comforting and satisfying qualities.",
+        "Spaghetti is a classic Italian pasta that is long, thin, and cylindrical. It is made from durum wheat semolina and water. It is often served al dente, meaning it has a firm bite. Spaghetti is versatile and pairs well with a variety of sauces, such as marinara, Bolognese, or carbonara. It is a staple in Italian cuisine and loved worldwide for its comforting and satisfying qupaghetti is a classic Italian pasta that is long, thin, and cylindrical. It is made from durum wheat semolina and water. It is often served al dente, meaning it has a firm bite. Spaghetti is versatile and pairs well with a variety of sauces, such as marinara, Bolognese, or carbonara. It is a staple in Italian cuisine and loved worldwide for its comforting and satisfying qualities.",
       image:
         "https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8NXx8fGVufDB8fHx8fA%3D%3D",
       CreatedDate: "2022/12/12",
@@ -96,15 +94,10 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/login" element={<SignIn />}></Route>
-        {/* <Route path="/register" element={<SignUp />}></Route> */}
-        <Route path="/showPost" element={<ShowPost posts={posts} />} />
+        <Route path="/show_post" element={<ShowPost posts={posts} />} />
         <Route path="/post/:postId" element={<PostDetails posts={posts} />} />
-
-
-
         <Route path="all_post" element={<AllPost posts={posts}/>}></Route>
         <Route path="/user_Management" element={<UserManagement />}></Route>
-        
         <Route path="/ip_configuration" element={<IPConfiguration />}></Route>
         <Route path="/report_generating" element={<ReportGenerating />}></Route>
         <Route path="/settings" element={<Settings />}></Route>

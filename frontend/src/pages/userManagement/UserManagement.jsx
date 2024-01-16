@@ -1,5 +1,5 @@
 import React from "react";
-import NavBar from "../../components/NavBar2/Navbar";
+import NavBar from "../../components/NavBar/Navbar";
 import SideBar from "../../components/side/SideBar";
 import UserDetails from "../../components/userDetails/UserDetails";
 import SearchBar from "../../components/searchBar/SearchBar";
