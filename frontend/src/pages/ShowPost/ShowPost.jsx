@@ -2,6 +2,7 @@ import React,{useState} from "react";
 import Post from "../../components/Post/Post";
 import Navbars from "../../components/NavBar/Navbar";
 import SideBar from "../../components/side/SideBar";
+import SearchBar from "../../components/postSearchBar/SearchBar";
 const ShowPost = ({ posts }) => {
     const [sidebarOpen, setSidebarOpen] = useState();
   return (
