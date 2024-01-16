@@ -8,7 +8,7 @@ import Logo from "../../../image/logo.png";
 import LogOutButton from "../LogOutButton/LogOutButton";
 import { useNavigate } from "react-router-dom";
 import { IoMdNotificationsOutline } from "react-icons/io";
-const NavBar = () => {
+const NavBar = ({ sidebarOpen }) => {
   const navigate = useNavigate();
   const [showLogOut, setShowLogOut] = useState(false);
 
@@ -20,11 +20,11 @@ const NavBar = () => {
   };
 
   return (
-    <div className="navContainer">
+    <div className="navContainer ">
       <Navbar
         expand="lg"
-        className="nav"
-        style={{ height: "50px", width: "100%" }}>
+        className={sidebarOpen ? "nav sidebarOpenNav" : "nav sidebarCloseNav"}
+        style={{ height: "50px", position: "fixed",right:"0" }}>
         <Navbar.Brand
           href="#home"
           className="d-flex align-items-center ms-auto">

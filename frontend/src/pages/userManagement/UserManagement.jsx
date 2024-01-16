@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import NavBar from "../../components/NavBar/Navbar";
 import SideBar from "../../components/side/SideBar";
 import UserDetails from "../../components/userDetails/UserDetails";
@@ -7,6 +7,9 @@ import "./userManagement.css";
 import Pagination from "../../components/pagination/Pagination";
 
 const UserManagement = () => {
+  const [sidebarOpen, setSidebarOpen] = useState(
+    localStorage.getItem("sideBarOpen") == "true"
+  );
   const users = [
     {
       firstName: "kusal",
@@ -102,53 +105,55 @@ const UserManagement = () => {
 
   return (
     <div>
-      <SideBar selectedNav="User Management">
+      <SideBar setSidebarOpen={setSidebarOpen} selectedNav="User Management">
         <div>
-          <NavBar />
+          <NavBar sidebarOpen={sidebarOpen} />
 
-          <div className="d-flex justify-content-center mt-1">
-            <div
-              style={{ width: "90%", margin: 0 }}
-              className="d-flex justify-content-between">
-              <Pagination />
-              <div>
-                <SearchBar />
-              </div>
-            </div>
-          </div>
-
-          <div className="d-flex justify-content-center align-items-center">
-            <div
-              style={{
-                height: `calc(100vh - 115px)`,
-                width: "90%",
-                borderRadius: "5px",
-              }}
-              className="bg-white mt-1">
-              {/*ddddddddddd */}
-              <div className="container-fluid mt-1">
-                <div style={{ margin: "0px 10px 0px 30px" }}>
-                  <div
-                    className="row align-items-center container-fluid"
-                    style={{
-                      height: "35px",
-                      color: "#000000dd",
-                      fontWeight: "600",
-                    }}>
-                    <div className="col-4 ">
-                      <div style={{ marginLeft: "45px" }}>Name</div>
-                    </div>
-                    <div className="col-3">Joined Date </div>
-                    <div className="col-3">
-                      <p>Login Method</p>
-                    </div>
-                    <div className="col-1">Posts</div>
-                  </div>
+          <div style={{transition: "padding-left 300ms",paddingTop:"50px",paddingLeft:sidebarOpen?"240px":"50px"}}>
+            <div className="d-flex justify-content-center">
+              <div
+                style={{ width: "90%",}}
+                className="d-flex justify-content-between">
+                <Pagination />
+                <div>
+                  <SearchBar />
                 </div>
               </div>
-              {users.map((user, index) => {
-                return <UserDetails key={index} user={user} index={index} />;
-              })}
+            </div>
+
+            <div className="d-flex justify-content-center align-items-center">
+              <div
+                style={{
+                  height: `calc(100vh - 115px)`,
+                  width: "90%",
+                  borderRadius: "5px",
+                }}
+                className="bg-white mt-1">
+                {/*ddddddddddd */}
+                <div className="container-fluid mt-1">
+                  <div style={{ margin: "0px 10px 0px 30px" }}>
+                    <div
+                      className="row align-items-center container-fluid"
+                      style={{
+                        height: "35px",
+                        color: "#000000dd",
+                        fontWeight: "600",
+                      }}>
+                      <div className="col-4 ">
+                        <div style={{ marginLeft: "45px" }}>Name</div>
+                      </div>
+                      <div className="col-3">Joined Date </div>
+                      <div className="col-3">
+                        <p>Login Method</p>
+                      </div>
+                      <div className="col-1">Posts</div>
+                    </div>
+                  </div>
+                </div>
+                {users.map((user, index) => {
+                  return <UserDetails key={index} user={user} index={index} />;
+                })}
+              </div>
             </div>
           </div>
         </div>
