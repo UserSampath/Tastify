@@ -10,7 +10,15 @@ const ShowPost = ({ posts }) => {
       <SideBar setSidebarOpen={setSidebarOpen} selectedNav="User Management">
         <div>
           <Navbars sidebarOpen={sidebarOpen} />
-          <div style={{paddingTop:"50px"}}>
+          <div
+            style={{
+              transition: "padding-left 300ms",
+              paddingTop: "50px",
+              paddingLeft: sidebarOpen ? "240px" : "60px",
+            }}>
+            
+
+            
             <Post posts={posts} />
           </div>
         </div>

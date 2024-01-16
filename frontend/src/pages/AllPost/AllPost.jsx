@@ -4,6 +4,7 @@ import SideBar from "../../components/side/SideBar";
 import AllPostsCom from "../../components/AllPostsCom/AllPostsCom";
 import SearchBar from "../../components/postSearchBar/SearchBar";
 
+
 const AllPost = ({ posts }) => {
   const [sidebarOpen, setSidebarOpen] = useState(
     localStorage.getItem("sideBarOpen") == "true"

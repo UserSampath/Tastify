@@ -2,9 +2,12 @@ import React from 'react'
 import { MdDeleteOutline } from "react-icons/md";
 
 import LoginMethodTag from '../loginMethodTag/LoginMethodTag';
-const UserDetails = ({user}) => {
+import { useNavigate } from 'react-router-dom';
+const UserDetails = ({ user }) => {
+  const navigate=useNavigate();
   return (
     <div
+      onClick={() => navigate("/one_member_posts")}
       className="container-fluid "
       style={{
         borderBottom: "1px solid #ececec",
@@ -38,7 +41,7 @@ const UserDetails = ({user}) => {
             <div style={{ fontSize: "16px" }}>{user.joinedDate}</div>
           </div>
           <div className="col-3">
-           <LoginMethodTag loginMethod={user.loginMethod}/>
+            <LoginMethodTag loginMethod={user.loginMethod} />
           </div>
           <div className="col-1">
             <div style={{ fontSize: "16px" }}>{user.posts}</div>

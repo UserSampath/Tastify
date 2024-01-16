@@ -40,7 +40,6 @@
 }
 
 .mainContainner{
-    margin-top: 14px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 12px;
@@ -73,7 +72,7 @@
   .mainshowdetail{
     background-color: #fff;
   border-radius: 5px;
-  height: 235px;
+  /* height: 235px; */
   }
   .commentshow{
     display:flex;
