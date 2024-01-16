@@ -24,6 +24,7 @@ function App() {
       firstName: "John",
       lastName: "Doe",
       profilePicture: "https://c8.alamy.com/comp/KEDB24/handsome-young-man-profile-KEDB24.jpg",
+      commentCount : 25,
     },
     {
       id: 2,
@@ -37,6 +38,8 @@ function App() {
       firstName: "Jane",
       lastName: "Smith",
       profilePicture: "https://media.istockphoto.com/id/1300512215/photo/headshot-portrait-of-smiling-ethnic-businessman-in-office.jpg?s=612x612&w=0&k=20&c=QjebAlXBgee05B3rcLDAtOaMtmdLjtZ5Yg9IJoiy-VY=",
+      commentCount : 25,
+
     },
     {
       id: 3,
@@ -49,6 +52,8 @@ function App() {
       firstName: "Bob",
       lastName: "Johnson",
       profilePicture: "https://www.shutterstock.com/image-photo/headshot-portrait-smiling-african-american-260nw-1667439898.jpg",
+      commentCount : 25,
+
     },
     {
       id: 4,
@@ -61,6 +66,8 @@ function App() {
       firstName: "Alice",
       lastName: "Anderson",
       profilePicture: "https://www.shutterstock.com/image-photo/happy-cheerful-young-african-business-260nw-2111421074.jpg",
+      commentCount : 25,
+
     },
     {
       id: 5,
@@ -74,6 +81,8 @@ function App() {
       firstName: "Chris",
       lastName: "Clark",
       profilePicture: "https://www.shutterstock.com/image-photo/happy-millennial-hipster-girl-reading-260nw-1517143949.jpg",
+      commentCount : 25,
+
     },
     {
       id: 6,
@@ -86,6 +95,8 @@ function App() {
       firstName: "Eva",
       lastName: "Evans",
       profilePicture: "https://www.shutterstock.com/image-photo/planning-office-portrait-black-woman-260nw-2262612103.jpg",
+      commentCount : 25,
+
     },
   ];
   

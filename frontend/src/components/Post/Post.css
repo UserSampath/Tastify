@@ -1,29 +1,29 @@
 .imagediv {
     border-radius: 8px;
     overflow: hidden;
-    margin-right: 10px;
+    margin-right: 12px;
 }
 
 .image {
     width: 100%;
     height: 150px;
     object-fit: cover;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-radius: 8px;
+
 }
 
 .detaildiv {
     padding: 8px;
     background-color: #fff;
     border-radius: 0 0 8px 8px;
-    height: 85px;
     overflow: hidden;
 }
-
+.detail {
+    margin-left:5px;
+}
 .tag {
     font-size: 0.55rem;
     color: #333;
-    margin-bottom: 12px;
 }
 .liketag {
     font-size: 0.85rem;
@@ -31,35 +31,20 @@
     margin-top: 15px;
 }
 
-.animation {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-}
+
 
 .title {
     font-size: 1rem;
     font-weight: bold;
     color: #333;
-    margin-bottom: 8px;
 }
-.blueline {
-    position: absolute;
-    bottom: 5px; /* Adjust the bottom offset as needed */
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: var(--color2);
-    transition: height 0.3s ease-out;
-}
+
 .mainContainner{
     margin-top: 14px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 12px;
+    
 }
 .title-likes-container {
     display: flex;
@@ -67,16 +52,30 @@
   }
   
   .likes-container {
-    margin-left: auto;
-    display: flex;
-
+    display:flex;
+    alignItems: center;
   }
   .showposttitle{
-    font-size: 0.9rem;
-    font-weight: bold;
+    font-size: 16px;
+    font-weight: 600 !important;
     color: #333;
+    margin-left: 5px;
   }
-  .Createdate{
+  .createdate{
     font-size: 0.6rem;
-    color: #333;
+        color: gray;
+     
+  }
+  .titledata{
+    margin-top:5px;
+    margin-left: 5px;
+  }
+  .mainshowdetail{
+    background-color: #fff;
+  border-radius: 5px;
+  height: 235px;
+  }
+  .commentshow{
+    display:flex;
+    alignItems: center;
   }

@@ -3,6 +3,8 @@ import React, { useState } from "react";
 import "./Post.css";
 import { Link } from "react-router-dom";
 import { FcLike } from "react-icons/fc";
+import { FiMessageSquare } from "react-icons/fi";
+
 const Post = ({ posts }) => {
   const [selectedPost, setSelectedPost] = useState(null);
 
@@ -26,36 +28,40 @@ const Post = ({ posts }) => {
             transform: selectedPost === post.id ? "translateY(-5px)" : "none", 
           }}>
           <Link to={`/post/${post.id}`} className="post-link">
-          <div className='maindetail'>
+          <div className='mainshowdetail'>
           <div className='profileContainer'>
                 </div>
-                <div className="titlediv">
-                    <div className="title-and-likes">
+                    <div className="titledata">
                         <h4 className="showposttitle">{post.title}</h4>
-                        <div className="likes-container">
-                        <FcLike style={{ marginRight: "5px" }} />
-                        <p className="liketag">{post.likes}</p>
-                        </div>
-                        
-                    </div>
-                    <p className="Createdate">Create Date: {post.CreatedDate}</p>
+                        <p className="createdate" style={{marginLeft:"5px"}} >{post.CreatedDate}</p>
 
                     </div>
 
-                
+                   
+
                     <div className="imagediv">
+                      
               <img src={post.image} alt="" className="image" />
             </div>
             <div className="detail">
-              <div className="title-likes-container">
-                <div
-                  style={{ display: "flex", justifyContent: "space-between" }}>
-                  <div>
+            
+                  <div className="likes-container">
+                        <FcLike style={{ marginRight: "5px" }} />
+                        <p className="liketag">{post.likes}</p>
+                     
+                        <div className="commentshow">
+                          <FiMessageSquare
+                            style={{
+                              marginRight: "5px",
+                              marginLeft: "5px",
+                              marginTop : "2px",
+                            }}
+                          />
+                            <p className="liketag">{post.commentCount}</p>
+
+                        </div>
+                      
                
-                    <p className="tag">{post.description}</p>
-                  </div>
-                  
-                </div>
               </div>
             </div>
             </div>

@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { FcLike } from "react-icons/fc";
 import "./AllPostsCom.css" 
 import { MdDeleteOutline } from "react-icons/md";
+import { FiMessageSquare } from "react-icons/fi";
+
 const AllPostsCom = ({posts}) => {
     
     const [selectedPost, setSelectedPost] = useState(null);
@@ -59,16 +61,29 @@ const AllPostsCom = ({posts}) => {
               <div className="titlediv">
                 <div className="title-and-likes">
                   <div className="posttitle">{post.title}</div>
-                  <div className="likes-container">
-                    <FcLike style={{ marginRight: "5px" }} />
-                    <p className="liketag">{post.likes}</p>
-                  </div>
+              
                 </div>
               </div>
 
               <div className="imagediv">
                 <img src={post.image} alt="" className="image" />
               </div>
+              <div className="alllikes-container">
+                        <FcLike style={{ marginRight: "5px" }} />
+                        <p className="liketag">{post.likes}</p>
+                     
+                        <div className='commentall'>
+                          <FiMessageSquare
+                            style={{
+                              marginRight: "5px",
+                              marginLeft: "5px",
+                              marginTop : "2px",
+                            }}
+                          />
+                               <p className="commenttag">{post.commentCount}</p>
+
+                        </div>
+                        </div>
             </div>
             {selectedPost === post.id && <div className="blueline"></div>}
             <div
