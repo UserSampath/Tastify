@@ -24,7 +24,7 @@ const NavBar = ({ sidebarOpen }) => {
       <Navbar
         expand="lg"
         className={sidebarOpen ? "nav sidebarOpenNav" : "nav sidebarCloseNav"}
-        style={{ height: "50px", position: "fixed",right:"0" }}>
+        style={{ height: "50px", position: "fixed", right: "0" }}>
         <Navbar.Brand
           href="#home"
           className="d-flex align-items-center ms-auto">
@@ -53,6 +53,7 @@ const NavBar = ({ sidebarOpen }) => {
                   alt=""
                   style={{ height: "42px" }}
                 />
+               
               </div>
             </div>
           </span>
