@@ -112,7 +112,7 @@ const UserManagement = () => {
           <div style={{transition: "padding-left 300ms",paddingTop:"50px",paddingLeft:sidebarOpen?"240px":"50px"}}>
             <div className="d-flex justify-content-center">
               <div
-                style={{ width: "90%",}}
+                style={{ width: "90%", padding:"10px 0px 10px 0px"}}
                 className="d-flex justify-content-between">
                 <Pagination />
                 <div>
@@ -129,7 +129,7 @@ const UserManagement = () => {
                   borderRadius: "5px",
                 }}
                 className="bg-white mt-1">
-                {/*ddddddddddd */}
+            
                 <div className="container-fluid mt-1">
                   <div style={{ margin: "0px 10px 0px 30px" }}>
                     <div
@@ -138,6 +138,8 @@ const UserManagement = () => {
                         height: "35px",
                         color: "#000000dd",
                         fontWeight: "600",
+                        padding: "5px 0px 5px 0px",
+                        marginBottom: "5px"
                       }}>
                       <div className="col-4 ">
                         <div style={{ marginLeft: "45px" }}>Name</div>

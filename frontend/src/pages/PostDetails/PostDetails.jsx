@@ -100,10 +100,9 @@ const PostDetails = ({ posts }) => {
                   <div
                     style={{
                       textAlign: "justify",
-                      fontWeight: "100",
-                      fontFamily: "sans-serif",
+                      fontWeight: "400",
                       fontSize: "16px",
-                      color: "#6b6b6b",
+                      color: "#343434",
                     }}>
                     {post.description}
                   </div>

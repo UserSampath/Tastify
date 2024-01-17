@@ -20,10 +20,10 @@ const SideBar = ({ children, selectedNav, setSidebarOpen }) => {
 
   const Menus = [
     { title: "User Management", navigation: "/" },
-    { title: "All Post", navigation: "/all_post" },
-    { title: "IP Configuration", navigation: "/ip_configuration" },
-    { title: "Report Generating", navigation: "/report_generating" },
-    { title: "Settings", navigation: "/settings" },
+    { title: "Posts", navigation: "/posts" },
+    { title: "Setting 1", navigation: "/setting_1" },
+    { title: "Setting 2", navigation: "/setting_2" },
+    { title: "Setting 3", navigation: "/setting_3" },
   ];
 
   const clickedSideButton = () => {
@@ -89,16 +89,12 @@ const SideBar = ({ children, selectedNav, setSidebarOpen }) => {
                     fontSize: "15px",
                   }}>
                   {Menu.title === "User Management" && <CiUser size={20} />}{" "}
-                  {Menu.title === "All Post" && (
-                    <HiOutlineQueueList size={20} />
-                  )}{" "}
-                  {Menu.title === "IP Configuration" && (
-                    <IoLinkOutline size={20} />
-                  )}{" "}
-                  {Menu.title === "Report Generating" && (
+                  {Menu.title === "Posts" && <HiOutlineQueueList size={20} />}{" "}
+                  {Menu.title === "Setting 1" && <IoLinkOutline size={20} />}{" "}
+                  {Menu.title === "Setting 2" && (
                     <TbReportAnalytics size={20} />
                   )}{" "}
-                  {Menu.title === "Settings" && <CiSettings size={20} />}
+                  {Menu.title === "Setting 3" && <CiSettings size={20} />}
                   <span
                     style={{
                       display: !open ? "none" : "inline",

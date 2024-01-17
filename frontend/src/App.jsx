@@ -195,11 +195,11 @@ function App() {
         <Route path="/login" element={<SignIn />}></Route>
         <Route path="/one_member_posts" element={<ShowPost posts={posts} />} />
         <Route path="/post/:postId" element={<PostDetails posts={posts} />} />
-        <Route path="all_post" element={<AllPost posts={posts}/>}></Route>
+        <Route path="posts" element={<AllPost posts={posts} />}></Route>
         <Route path="/" element={<UserManagement />}></Route>
-        <Route path="/ip_configuration" element={<IPConfiguration />}></Route>
-        <Route path="/report_generating" element={<ReportGenerating />}></Route>
-        <Route path="/settings" element={<Settings />}></Route>
+        <Route path="/setting_1" element={<IPConfiguration />}></Route>
+        <Route path="/setting_2" element={<ReportGenerating />}></Route>
+        <Route path="/setting_3" element={<Settings />}></Route>
       </Routes>
     </BrowserRouter>
   );

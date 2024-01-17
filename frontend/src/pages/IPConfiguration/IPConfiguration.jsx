@@ -17,7 +17,7 @@ const IPConfiguration = () => {
               paddingTop: "50px",
               paddingLeft: sidebarOpen ? "240px" : "60px",
             }}>
-            <h1>vdff</h1>
+            <h1>setting1</h1>
           </div>
         </div>
       </SideBar>

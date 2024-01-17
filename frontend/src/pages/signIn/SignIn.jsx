@@ -70,12 +70,15 @@ const signInButtonClicked = async() => {
   return (
     <div className="signUpPage">
       <div className="boxContainer" style={{backgroundColor:"#990000"}}>
-        <div className="signInBox "  >
+        <div className="signInBox ">
+          <div style={{position:"absolute" , left:"10px",top:"10px"}}>
+            <img style={{width:"40px "}} src="../../../image/Logo.png"/>
+          </div>
           <div className="centerSignIn" >
             <div className="signInContainer" >
             <div className="ContainerTextSign" >
                 <h2 >Welcome to</h2>
-                <h2 > Tastyfy Admin Panel</h2>
+                <h2 > Tastify Admin Panel</h2>
                 <p >Log in to access your account. </p>
               </div>
 
@@ -120,7 +123,7 @@ const signInButtonClicked = async() => {
             <div>
               <div className="imgContainerTextSign" >
                 <h2 className="whiteH2">Welcome to</h2>
-                <h2 className="whiteH2"> Tastyfy Admin Panel</h2>
+                <h2 className="whiteH2"> Tastify Admin Panel</h2>
                 <p >Log in to access your account. </p>
               </div>
               <div>

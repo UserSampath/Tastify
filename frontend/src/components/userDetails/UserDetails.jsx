@@ -33,7 +33,7 @@ const UserDetails = ({ user }) => {
             />
             <div
               style={{
-                fontWeight: "600",
+               
                 fontSize: "16px",
               }}>{`${user.firstName} ${user.lastName}`}</div>
           </div>

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { FcLike } from "react-icons/fc";
 import { FiMessageSquare } from "react-icons/fi";
 import SearchBar from "../postSearchBar/SearchBar";
+import { MdDeleteOutline } from "react-icons/md";
 
 const Post = ({ posts }) => {
   const [selectedPost, setSelectedPost] = useState(null);
@@ -46,42 +47,56 @@ const Post = ({ posts }) => {
           <div
             key={post.id}
             style={{
+              padding: "8px",
               margin: "auto",
-              width: "250px",
+              width: "260px",
               borderRadius: "15px",
-              boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
+              boxShadow: "0px 4px 8px rgba(68, 7, 7, 0.1)",
               position: "relative",
               transition: "transform 0.3s ease-out",
               transform: selectedPost === post.id ? "translateY(-5px)" : "none",
             }}>
             <Link to={`/post/${post.id}`} className="post-link">
-              <div className="mainshowdetail">
-                <div className="profileContainer"></div>
-                <div className="titledata">
-                  <h4 className="showposttitle">{post.title}</h4>
-                  <p className="createdate" style={{ marginLeft: "5px" }}>
-                    {post.CreatedDate}
-                  </p>
+              <div
+                style={{
+                  backgroundColor: "white",
+                  borderRadius: "5px",
+                  height: "230px",
+                }}>
+                <div className="titlediv">
+                  <div
+                    style={{}}
+                    className="d-flex justify-content-between align-items-center">
+                    <div className="posttitle overflow-hidden">
+                      {post.title}
+                    </div>
+                    <div className="comment-delete-button post-delete-button">
+                      <MdDeleteOutline
+                        style={{ margin: "2px 4px 2px 4px " }}
+                        size={18}
+                      />
+                    </div>
+                  </div>
                 </div>
 
                 <div className="imagediv">
                   <img src={post.image} alt="" className="image" />
                 </div>
-                <div className="detail">
-                  <div className="likes-container">
-                    <FcLike style={{ marginRight: "5px" }} />
-                    <p className="liketag">{post.likes}</p>
+                <div
+                  style={{ marginTop: "10px" }}
+                  className="alllikes-container">
+                  <FcLike style={{ marginRight: "5px" }} />
+                  <p className="liketag">{post.likes}</p>
 
-                    <div className="commentshow">
-                      <FiMessageSquare
-                        style={{
-                          marginRight: "5px",
-                          marginLeft: "5px",
-                          marginTop: "2px",
-                        }}
-                      />
-                      <p className="liketag">{post.commentCount}</p>
-                    </div>
+                  <div className="commentall">
+                    <FiMessageSquare
+                      style={{
+                        marginRight: "5px",
+                        marginLeft: "5px",
+                        marginTop: "2px",
+                      }}
+                    />
+                    <p className="commenttag">{post.commentCount}</p>
                   </div>
                 </div>
               </div>

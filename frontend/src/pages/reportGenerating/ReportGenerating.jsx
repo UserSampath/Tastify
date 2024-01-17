@@ -16,7 +16,7 @@ const ReportGenerating = () => {
               paddingTop: "50px",
               paddingLeft: sidebarOpen ? "240px" : "60px",
             }}>
-            <h1>Report Generating</h1>
+            <h1>setting 2</h1>
           </div>
         </div>
       </SideBar>
