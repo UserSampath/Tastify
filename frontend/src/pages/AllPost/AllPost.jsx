@@ -11,14 +11,21 @@ const AllPost = ({ posts }) => {
   );
   return (
     <div>
-      <SideBar setSidebarOpen={setSidebarOpen} selectedNav="AllPost">
+      <SideBar setSidebarOpen={setSidebarOpen} selectedNav="Posts">
         <div>
           <NavBar sidebarOpen={sidebarOpen} />
-          <div style={{transition: "padding-left 300ms",paddingTop:"50px",paddingLeft:sidebarOpen?"240px":"60px"}}> <div className=" d-flex justify-content-center align-items-center">
-            <SearchBar />
+          <div
+            style={{
+              transition: "padding-left 300ms",
+              paddingTop: "50px",
+              paddingLeft: sidebarOpen ? "240px" : "60px",
+            }}>
+            {" "}
+            <div className=" d-flex justify-content-center align-items-center">
+              <SearchBar />
+            </div>
+            <AllPostsCom posts={posts} />{" "}
           </div>
-          <AllPostsCom posts={posts} /> </div>
-         
         </div>
       </SideBar>
     </div>

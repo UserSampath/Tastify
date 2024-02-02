@@ -7,7 +7,7 @@ const ReportGenerating = () => {
   );
   return (
     <div>
-      <SideBar setSidebarOpen={setSidebarOpen} selectedNav="Report Generating">
+      <SideBar setSidebarOpen={setSidebarOpen} selectedNav="Setting 2">
         <div>
           <NavBar sidebarOpen={sidebarOpen} />
           <div

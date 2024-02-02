@@ -8,7 +8,7 @@ const IPConfiguration = () => {
   );
   return (
     <div>
-      <SideBar setSidebarOpen={setSidebarOpen} selectedNav="IP Configuration">
+      <SideBar setSidebarOpen={setSidebarOpen} selectedNav="Setting 1">
         <div>
           <NavBar sidebarOpen={sidebarOpen} />
           <div

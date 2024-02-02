@@ -1,7 +1,9 @@
 // PostDetails.js
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import Navbars from "../../components/NavBar/Navbar";
+import SideBar from "../../components/side/SideBar";
+
 import "./PostDetails.css";
 import { FcLike } from "react-icons/fc";
 import { BsReply } from "react-icons/bs";
@@ -17,96 +19,105 @@ const PostDetails = ({ posts }) => {
     return <div>Post not found</div>;
   }
 
+    const [sidebarOpen, setSidebarOpen] = useState(
+      localStorage.getItem("sideBarOpen") == "true"
+    );
   return (
     <div>
-      <div>
-        <Navbars />
-        <div style={{paddingTop:"50px"}}>
-          {" "}
+      <SideBar setSidebarOpen={setSidebarOpen} >
+        <div>
+          <Navbars sidebarOpen={sidebarOpen} />
           <div
-            className="container bg-white mt-2"
             style={{
-              width: "800px",
-              borderRadius: "10px",
-              paddingTop: "10px",
-              position: "relative",
+              transition: "padding-left 300ms",
+              paddingTop: "50px",
+              paddingLeft: sidebarOpen ? "240px" : "50px",
             }}>
-            <div style={{ position: "absolute", left: "-70px", top: "20px" }}>
-              <div
-                className="d-flex justify-content-center align-items-center"
-                style={{
-                  height: "35px",
-                  border: "2px solid #990000",
-                  width: "60px ",
-                  borderRadius: "20px",
-                  color: "#990000",
-                  backgroundColor: "#f7f7f797",
-                }}>
-                <FaAngleLeft />
-              </div>
-            </div>
-            <div className=" container-lg d-flex align-items-center justify-content-between">
-              <div className="d-flex align-items-center">
-                <img
-                  src="../../../image/Men.png"
-                  style={{ height: "50px", width: "50px" }}
-                />
-                <div className="ms-2">
-                  <div
-                    style={{
-                      fontWeight: "600",
-                      fontSize: "18px",
-                      color: "#454545",
-                    }}>
-                    {" "}
-                    Danushka Dishan
-                  </div>
-                  <div style={{ fontSize: "12px", color: "gray" }}>
-                    {" "}
-                    {post.CreatedDate}
-                  </div>
+            {" "}
+            <div
+              className="container bg-white mt-2"
+              style={{
+                width: "800px",
+                borderRadius: "10px",
+                paddingTop: "10px",
+                position: "relative",
+              }}>
+              <div style={{ position: "absolute", left: "-70px", top: "20px" }}>
+                <div
+                  className="d-flex justify-content-center align-items-center"
+                  style={{
+                    height: "35px",
+                    border: "2px solid #990000",
+                    width: "60px ",
+                    borderRadius: "20px",
+                    color: "#990000",
+                    backgroundColor: "#f7f7f797",
+                  }}>
+                  <FaAngleLeft />
                 </div>
               </div>
-              <div className="comment-delete-button">
-                <MdDeleteOutline
-                  style={{ margin: "2px 4px 2px 4px " }}
-                  size={22}
-                />
-              </div>
-            </div>
-            <hr style={{ margin: "5px" }} />
-            <div className="d-flex justify-content-center align-items-center">
-              <div
-                style={{
-                  fontSize: "28px",
-                  color: "#990000",
-                  fontWeight: "600",
-                }}>
-                {post.title}
-              </div>
-            </div>
-
-            <div style={{ textAlign: "center" }}>
-              <img
-                src={post.image}
-                alt=""
-                className="large-image"
-                style={{ display: "block", margin: "auto", marginTop: "0px" }}
-              />{" "}
-            </div>
-            <div className="shadow-card">
-              <div className="details">
-                <div>
-                  <div
-                    style={{
-                      textAlign: "justify",
-                      fontWeight: "400",
-                      fontSize: "16px",
-                      color: "#343434",
-                    }}>
-                    {post.description}
+              <div className=" container-lg d-flex align-items-center justify-content-between">
+                <div className="d-flex align-items-center">
+                  <img
+                    src="../../../image/Men.png"
+                    style={{ height: "50px", width: "50px" }}
+                  />
+                  <div className="ms-2">
+                    <div
+                      style={{
+                        fontWeight: "600",
+                        fontSize: "18px",
+                        color: "#454545",
+                      }}>
+                      {" "}
+                      Danushka Dishan
+                    </div>
+                    <div style={{ fontSize: "12px", color: "gray" }}>
+                      {" "}
+                      {post.CreatedDate}
+                    </div>
                   </div>
-                  {/* 
+                </div>
+                <div className="comment-delete-button">
+                  <MdDeleteOutline
+                    style={{ margin: "2px 4px 2px 4px " }}
+                    size={22}
+                  />
+                </div>
+              </div>
+              <hr style={{ margin: "5px" }} />
+              <div className="d-flex justify-content-center align-items-center">
+                <div
+                  style={{
+                    fontSize: "28px",
+                    color: "#990000",
+                    fontWeight: "600",
+                  }}>
+                  {post.title}
+                </div>
+              </div>
+
+              <div style={{ textAlign: "center" }}>
+                <img
+                  src={post.image}
+                  alt=""
+                  className="large-image"
+                  style={{ display: "block", margin: "auto", marginTop: "0px" }}
+                />{" "}
+              </div>
+              <div className="shadow-card">
+                <div className="details">
+                  <div>
+                    <div
+                      style={{
+                        textAlign: "justify",
+                        fontWeight: "400",
+                        fontSize: "16px",
+                        color: "#343434",
+                      }}>
+                      {post.description}
+                    </div>
+                    {/* 
                    <div
                   style={{
                     display: "flex",
@@ -129,31 +140,32 @@ const PostDetails = ({ posts }) => {
                 </div>
                   
                   */}
-                  <hr style={{ margin: "10px" }} />
-                  <div className="d-flex align-content-center">
-                    <div className="d-flex align-items-center">
-                      <FcLike size={25} style={{ marginRight: "5px" }} />
-                      <p className="liketag">{post.likes}</p>
-                    </div>
+                    <hr style={{ margin: "10px" }} />
+                    <div className="d-flex align-content-center">
+                      <div className="d-flex align-items-center">
+                        <FcLike size={25} style={{ marginRight: "5px" }} />
+                        <p className="liketag">{post.likes}</p>
+                      </div>
 
-                    <div className="d-flex align-items-center ms-3">
-                      <FiMessageSquare
-                        size={20}
-                        style={{
-                          marginRight: "5px",
-                          marginLeft: "5px",
-                        }}
-                      />
-                      <p className="liketag">22</p>
+                      <div className="d-flex align-items-center ms-3">
+                        <FiMessageSquare
+                          size={20}
+                          style={{
+                            marginRight: "5px",
+                            marginLeft: "5px",
+                          }}
+                        />
+                        <p className="liketag">22</p>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
+            <CommentSection />
           </div>
-          <CommentSection />
         </div>
-      </div>
+      </SideBar>
     </div>
   );
 };

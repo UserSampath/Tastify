@@ -8,7 +8,7 @@ const Settings = () => {
   );
   return (
     <div>
-      <SideBar setSidebarOpen={setSidebarOpen} selectedNav="Settings">
+      <SideBar setSidebarOpen={setSidebarOpen} selectedNav="Setting 3">
         <div>
           <NavBar sidebarOpen={sidebarOpen} />
           <div
